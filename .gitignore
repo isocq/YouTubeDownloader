@@ -1,4 +1,5 @@
 *.sln
+.vs/
 packages/
 YouTubeDownloader/bin/
 YouTubeDownloader/obj/
