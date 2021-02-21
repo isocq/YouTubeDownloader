@@ -1,6 +1,7 @@
 *.sln
 *.config
 *.csproj
+*.pfx
 .vs/
 packages/
 YouTubeDownloader/bin/
