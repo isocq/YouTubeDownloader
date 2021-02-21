@@ -1,10 +1,10 @@
 *.sln
+*.config
+*.csproj
 .vs/
 packages/
 YouTubeDownloader/bin/
 YouTubeDownloader/obj/
 YouTubeDownloader/Properties/
-YouTubeDownloader/*.config
 YouTubeDownloader/App.xaml
 YouTubeDownloader/App.xaml.cs
-YouTubeDownloader/*.csproj
