@@ -43,13 +43,39 @@ namespace YouTubeDownloader
 
         public void Download_Click(object sender, EventArgs e)
         {
+            Log.Text = null;
             var youTube = YouTube.Default;
             string link = URLBox.Text;
-            var video = youTube.GetVideo(link);
-            string DownloadDir = @SaveDirBox.Text;
-            string path = System.IO.Path.Combine(DownloadDir, video.FullName);
-            File.WriteAllBytes(path, video.GetBytes());
-            Log.Text = "完了しました。";
+            if (String.IsNullOrWhiteSpace(link))
+            {
+                MessageBox.Show("URLを入力してください。",
+                                "エラー",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Warning);
+                Log.AppendText("エラー: URL未入力");
+                return;
+                
+            }
+            else
+            {
+                var video = youTube.GetVideo(link);
+                string DownloadDir = @SaveDirBox.Text;
+                if (String.IsNullOrWhiteSpace(DownloadDir))
+                {
+                    MessageBox.Show("ディレクトリを指定してください。",
+                                    "エラー",
+                                    MessageBoxButton.OK,
+                                    MessageBoxImage.Warning);
+                    Log.AppendText("エラー: ディレクトリ未指定");
+                    return;
+                }
+                else
+                {
+                    string path = System.IO.Path.Combine(DownloadDir, video.FullName);
+                    File.WriteAllBytes(path, video.GetBytes());
+                    Log.AppendText("ダウンロード完了");
+                }
+            }
         }
     }
 }

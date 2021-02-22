@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YouTubeDownloader"
         mc:Ignorable="d"
-        Title="YouTubeDownloader-v1.0" Height="450" Width="800">
+        Title="YouTubeDownloader-v1.1" Height="450" Width="800">
     <Grid>
         <!-- バージョンアップごとにWindowタグ内のTitleを書き換えること -->
         <Label Content="URLを入力" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" Width="80" Height="30" FontSize="16" />
         <TextBox x:Name="URLBox" HorizontalAlignment="Left" Margin="140,30,0,0" VerticalAlignment="Top" Width="622" Height="30" FontSize="16" />
-        <Label Content="例: https://youtube.com/watch?v=動画ID&#10;　  https://youtu.be/動画ID" HorizontalAlignment="Right" Margin="0,60,30,0" VerticalAlignment="Top" Width="230" Height="40" FontSize="12" />
+        <Label Content="例: https://www.youtube.com/watch?v=動画ID&#10;　  https://youtu.be/動画ID" HorizontalAlignment="Right" Margin="0,60,30,0" VerticalAlignment="Top" Width="255" Height="45" FontSize="12" />
         <Button Name="SelectDir" Content="ディレクトリを選択" HorizontalAlignment="Left" Margin="30,130,0,0" VerticalAlignment="Top" Width="130" Height="30" FontSize="16" Click="SelectDir_Click" />
         <TextBox x:Name="SaveDirBox" HorizontalAlignment="Left" Margin="190,130,0,0" VerticalAlignment="Top" Width="572" Height="30" FontSize="16" />
         <Button Name="DownloadButton" Content="ダウンロード" HorizontalAlignment="Center" Margin="0,190,0,0" VerticalAlignment="Top" Width="100" Height="30" FontSize="16" Click="Download_Click" />
-        <TextBox Name="Log" HorizontalAlignment="Left" Margin="30,250,0,0" VerticalAlignment="Top" Width="732" Height="139" FontSize="16" IsReadOnly="True" />
+        <TextBox Name="Log" HorizontalAlignment="Left" Margin="30,250,0,0" VerticalAlignment="Top" Width="732" Height="139" FontSize="16" />
     </Grid>
 </Window>
