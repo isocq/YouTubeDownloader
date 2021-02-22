@@ -2,6 +2,7 @@
 *.config
 *.csproj
 *.pfx
+*.user
 .vs/
 packages/
 YouTubeDownloader/bin/
